@@ -4,15 +4,26 @@
 
 Neste exercício você deve desenvolver um programa para encontrar a saída de um labirinto.
 
-O mapa do labirinto será lido de um arquivo texto. O labirinto é representado por uma matriz, cujo número de linhas e colunas são definidas na primeira linha do arquivo.  O conteúdo do labirinto é representado pelas linhas remanescentes do arquivo. Em cada linha, o símbolo 'x' é utilizado para representar um caminho válido é o símbolo '#' para representar paredes. A entrada do labirinto é representada pela letra ‘e’ e a saída pela letra ‘s’. A pasta `data` contêm exemplos de arquivos contendo labirintos.
+### Especificações
 
-Você deve carregar o labirinto em memória e, para cada nova posição explorada no labirinto, você deve imprimir o labirinto, assim como o estado da exploração, representando com o símbolo ‘.‘ posições já exploradas, e  com o símbolo ‘o’ a posição corrente.
+- O labirinto é representado por uma matriz em um arquivo de texto.
+- A primeira linha do arquivo contém o número de linhas e colunas do labirinto.
+- As linhas seguintes representam o conteúdo do labirinto:
+  - 'x': caminho válido
+  - '#': parede
+  - 'e': entrada do labirinto
+  - 's': saída do labirinto
+- Para cada nova posição explorada, o programa deve imprimir o labirinto atualizado:
+  - '.': posições já exploradas
+  - 'o': posição corrente
 
-O seu programa deve terminar:
-- caso a saída seja encontra;
-- caso não existam mais posições a serem exploradas.
+### Condições de Término
+O programa deve terminar quando:
+- A saída for encontrada
+- Não existirem mais posições a serem exploradas
 
-Um esqueleto do código ilustrando as principais funções está disponível nesse repositório. Você não precisa seguir esse esqueleto, fique a vontade para modificá-lo.
+### Implementação
+Um esqueleto do código com as principais funções está disponível no repositório. Você pode modificá-lo conforme necessário.
 
 ### Exercício Computacional 2
 
