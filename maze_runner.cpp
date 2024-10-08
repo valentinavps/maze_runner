@@ -18,6 +18,7 @@ using Maze = std::vector<std::vector<char>>;
 struct Position {
     int row;
     int col;
+    std::vector<std::vector<char>> maze;
 };
 
 // Variáveis globais
@@ -38,21 +39,19 @@ Position load_maze(const std::string& file_name) {
         if (std::getline(arquivo, primeiraLinha)) {
             std::istringstream iss(primeiraLinha);
             if (iss >> num_rows >> num_cols) {
-                maze.resize(num_rows);
+                
             }
         }
 
         std::string linha;
         int row = 0;
         while (std::getline(arquivo, linha) && row < num_rows) {
-            std::vector<char> linhaLabirinto;
-            for (char c : linha) {
-                linhaLabirinto.push_back(c);
-            }
-            maze[row] = linhaLabirinto;
-            row++;
+			std::vector<char> linhaLabirinto;
+			for(char c : linha) {
+				linhaLabirinto.push_back(c);
+			}
+			initial_pos.maze.push_back(linhaLabirinto);
         }
-
         // Encontrar a posição inicial (marcada por 'e')
         for (int i = 0; i < num_rows; i++) {
             for (int j = 0; j < num_cols; j++) {
